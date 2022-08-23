@@ -1,0 +1,50 @@
+---
+import Markdown from "@astrojs/markdown-component";
+
+const { title, description, url, date } = Astro.props;
+---
+
+<div class="item-block">
+  {
+    title && (
+      <div class="item-title">
+        <a href={url}>{title}</a>
+
+        {date && (
+          <div class="item-date"> {date.split('/')[2]}</div>
+        )}
+      </div>
+    )
+  }
+
+  {
+    description && (
+      <div class="item-description">
+        <Markdown>{description}</Markdown>
+      </div>
+    )
+  }
+</div>
+
+<style lang="scss">
+  .item-block {
+    margin-top: var(--spacing);
+  }
+  .item-title {
+    font-size: var(--mediumfont);
+    margin-bottom: var(--quarterspacing);
+  }
+  .item-description {
+    font-size: var(--smallfont);
+    p {
+      margin-bottom: var(--halfspacing);
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .item-date {
+    color: var(--grey);
+    font-weight: normal;
+  }
+</style>

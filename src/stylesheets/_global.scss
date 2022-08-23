@@ -1,0 +1,58 @@
+:root {
+  --medium: 400;
+  --bold: 800;
+
+  --layout-width: 800px;
+
+  --spacing: 40px;
+  --halfspacing: calc(var(--spacing) / 2);
+  --quarterspacing: calc(var(--spacing) / 4);
+  --doublespacing: calc(var(--spacing) * 2);
+
+  --extralargefont: 4em;
+  --largefont: 1.7em;
+  --mediumfont: 1.3em;
+  --smallfont: 1em;
+  --extrasmallfont: 0.85em;
+
+  --orangered: #EB613D;
+  --blue: #0000ff;
+  --black: #282B2E;
+  --white: #ffffff;
+  --grey: #BBC0C6;
+
+  --mobile-bp: 600px;
+}
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Space Mono", monospace, sans-serif;
+  font-variant-ligatures: no-common-ligatures;
+  padding: 0;
+  margin: 0;
+  color: var(--black);
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0 0 var(--spacing) 0;
+  line-height: 1.3;
+}
+
+p{
+  margin: 0;
+  line-height: 1.6;
+}
+
+a{
+  color: var(--orangered);
+  text-decoration: none;
+  font-weight: bold;
+  &:hover{
+    color: var(--orangered);
+    text-decoration: underline;
+  }
+}

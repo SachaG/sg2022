@@ -1,0 +1,33 @@
+---
+import Markdown from "@astrojs/markdown-component";
+---
+
+<footer>
+  <Markdown>
+    Made by Sacha Greif with [Astro](https://astro.build/) and
+    [Textures.js](https://riccardoscalco.github.io/textures/), using the
+    [Ego](http://ego-icons.com) icons. Typeset in [Space
+    Mono](https://fonts.google.com/specimen/Space+Mono). Hosted with
+    [Netlify](https://www.netlify.com/).
+  </Markdown>
+</footer>
+
+<style lang="scss">
+  @import "../stylesheets/_breakpoints.scss";
+
+  footer {
+    @include small {
+      padding: var(--quarterspacing);
+    }
+    @include medium {
+      padding: var(--halfspacing);
+    }
+    @include large {
+      padding: var(--halfspacing);
+    }
+    text-align: center;
+    background: var(--black);
+    color: var(--white);
+    font-size: var(--extrasmallfont);
+  }
+</style>

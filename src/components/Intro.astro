@@ -1,0 +1,121 @@
+---
+import SocialLinks from "./SocialLinks.astro";
+import Markdown from "@astrojs/markdown-component";
+import Logo from "./Logo.astro";
+
+const { name, title, description, social, index, background } = Astro.props;
+---
+
+<div
+  class="section-block section-intro"
+  style={{ backgroundColor: background }}
+>
+  <!-- <Texture className="svg-background" width={100} height={100} data={{}} options={{ index }} /> -->
+
+  <div class="about-wrapper">
+    <Logo />
+
+    <div class="about-contents section-intro-contents">
+      <div class="about-description">
+        <Markdown>
+          {
+            `
+          I'm **Sacha Greif**, a designer, developer, and entrepreneur. 
+          
+          I'm originally from Paris, France but these days I live in Kyoto, Japan.
+          
+          [Say hello](mailto:hello@sachagreif.com), or keep scrolling.
+          `
+          }
+        </Markdown>
+      </div>
+      <SocialLinks social={social} />
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  @import "../stylesheets/_breakpoints.scss";
+
+  .section-block {
+    @include small {
+      padding: 10px 10px 10px 10px;
+    }
+    @include medium {
+      padding: 20px 80px 20px 80px;
+      min-height: 100vh;
+    }
+    @include large {
+      padding: 40px 120px 40px 120px;
+      min-height: 100vh;
+    }
+    display: grid;
+    place-items: center;
+    position: relative;
+    &:last-of-type {
+      .section-icon {
+        &:after {
+          display: none;
+        }
+      }
+    }
+    &.section-intro {
+      perspective: 1000px;
+      @include small {
+        padding-top: 80px;
+      }
+    }
+  }
+
+  @keyframes {
+    from {
+      opacity: 0;
+      transform: rotateX(-80deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotateX(0deg);
+    }
+  }
+  .about-wrapper {
+    position: relative;
+  }
+
+  .about-contents {
+    // transform-origin: top;
+    // perspective: 500px;
+    // opacity: 0;
+    // transform: rotateX(-80deg);
+    // animation: swingDown 400ms 1000ms cubic-bezier(0.215, 0.61, 0.355, 1) 1;
+    // animation-fill-mode: forwards;
+    position: relative;
+    z-index: 10;
+    background: var(--white);
+    box-shadow: 8px 8px rgba(0, 0, 0, 0.15);
+    @include small {
+      padding: var(--doublespacing) var(--halfspacing) var(--halfspacing)
+        var(--halfspacing);
+    }
+    @include medium {
+      padding: var(--doublespacing) var(--spacing) var(--spacing) var(--spacing);
+    }
+    @include large {
+      padding: var(--doublespacing);
+    }
+  }
+  .about-description {
+    @include small {
+      font-size: var(--smallfont);
+    }
+    @include medium {
+      font-size: var(--largefont);
+    }
+    @include large {
+      font-size: var(--largefont);
+    }
+    margin-bottom: var(--spacing);
+    p {
+      margin-bottom: var(--spacing);
+    }
+  }
+</style>

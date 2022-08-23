@@ -10,6 +10,12 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^1.0.6"
+    "@astrojs/mdx": "^0.10.0",
+    "@modyfi/vite-plugin-yaml": "^1.0.3",
+    "astro": "^1.0.6",
+    "sass": "^1.54.5"
+  },
+  "dependencies": {
+    "@astrojs/markdown-component": "^1.0.1"
   }
 }

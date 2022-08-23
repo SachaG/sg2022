@@ -1,0 +1,105 @@
+---
+import icons from "../data/icons.yaml";
+
+const { social } = Astro.props;
+---
+
+<div class="social-links">
+  <div class="social-links-placeholder"></div>
+
+  {
+    social.map((item, index) => (
+      <div class="social-icon">
+        <a
+          title={item.title}
+          href={item.url}
+          set:html={icons[item.title.toLowerCase()]}
+        />
+      </div>
+    ))
+  }
+
+<div class="social-links-placeholder"></div>
+
+</div>
+
+<style lang="scss">
+  @import "../stylesheets/_breakpoints.scss";
+
+  @keyframes expand {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes grow {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include small {
+      padding: 0 var(--halfspacing);
+    }
+  }
+  .social-icon {
+    height: 40px;
+    width: 40px;
+    background: var(--black);
+    border-radius: 100%;
+    padding: 2px;
+
+    :global(path) {
+      fill: white;
+    }
+    &:hover {
+      background: var(--orangered);
+    }
+    margin: 0 10px;
+    // transform: scale(0);
+    // animation: grow 300ms 1300ms cubic-bezier(0.215, 0.61, 0.355, 1) 1;
+    // animation-fill-mode: forwards;
+
+    &:nth-child(3),
+    &:nth-child(5) {
+      animation-delay: 1400ms;
+    }
+    &:nth-child(2),
+    &:nth-child(6) {
+      animation-delay: 1500ms;
+    }
+  }
+
+  .social-links-placeholder {
+    @include small {
+      display: none;
+    }
+    display: block;
+    height: 1px;
+    border-bottom: 1px dotted var(--black);
+    flex: 1;
+    // transform: scaleX(0);
+    // animation: expand 100ms 1600ms cubic-bezier(0.215, 0.61, 0.355, 1) 1;
+    // animation-fill-mode: forwards;
+    &:first-of-type {
+      margin-right: 10px;
+      transform-origin: top right;
+    }
+    &:last-of-type {
+      margin-left: 10px;
+      transform-origin: top left;
+    }
+  }
+</style>

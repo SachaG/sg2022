@@ -1,0 +1,69 @@
+---
+import icons from "../data/icons.yaml";
+const { link, iconName } = Astro.props;
+---
+
+<div class="icon-block">
+  <!-- <Debug {icons[iconName]}/> -->
+  <div class="icon"><span set:html={icons[iconName]}></span></div>
+</div>
+
+<style lang="scss">
+  @import "../stylesheets/_breakpoints.scss";
+
+  .icon-block {
+    @include small {
+      display: none;
+    }
+    display: flex;
+    position: absolute;
+    left: -60px;
+    top: 35px;
+    justify-content: center;
+  }
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 110;
+    border-radius: 100%;
+    border: 4px solid var(--black);
+    width: 80px;
+    height: 80px;
+    font-size: var(--largefont);
+    color: var(--black);
+
+    background: var(--orangered);
+    border-color: var(--orangered);
+
+    // &:hover{
+    //   background: var(--orangered);
+    //   border-color: var(--orangered);
+    //   color: var(--white);
+    //   text-decoration: none;
+    // }
+    span {
+      display: block;
+    }
+
+    :global(svg) {
+      display: block;
+      height: 40px;
+      width: 40px;
+    }
+    :global(path),
+    :global(polygon),
+    :global(polyline),
+    :global(rect),
+    :global(line) {
+      fill: var(--black);
+      stroke: var(--black);
+
+      fill: var(--white);
+      stroke: var(--white);
+
+      fill: transparent;
+    }
+  }
+</style>
