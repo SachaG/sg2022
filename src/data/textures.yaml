@@ -1,0 +1,14 @@
+- id: intro
+  svg: <svg><defs><pattern id="vmhpt" patternUnits="userSpaceOnUse" width="20" height="20"><circle cx="10" cy="10" r="4" fill="transparent" stroke="rgba(0,0,0,0.13)" stroke-width="1"></circle></pattern></defs><rect style="fill:url(#vmhpt)" x="0" y="0" height="3000" width="3000"></rect></svg>
+- id: bio
+  svg: <svg><defs><pattern id="dbyyz" patternUnits="userSpaceOnUse" width="20" height="20"><path d="M 5,5l10,10M15,5l10,-10 M5,15l-10,10M15,25l10,-10 M-5,5l10,-10" fill="transparent" stroke="rgba(0,0,0,0.1)" stroke-width="1" stroke-linecap="square" shape-rendering="auto"></path></pattern></defs><rect style="fill:url(#dbyyz)" x="0" y="0" height="3000" width="3000"></rect></svg>
+- id: code
+  svg: <svg><defs><pattern id="ufqzu" patternUnits="userSpaceOnUse" width="30" height="30"><path d="M 0 7.5 l 7.5 0 l 0 -7.5 M 22.5 30 l 0 -7.5 l 7.5 0 M 7.5 15 l 0 7.5 l 7.5 0 M 15 7.5 l 7.5 0 l 0 7.5" fill="transparent" stroke="rgba(0,0,0,0.1)" stroke-width="1" stroke-linecap="square" shape-rendering="auto"></path></pattern></defs><rect style="fill:url(#ufqzu)" x="0" y="0" height="3000" width="3000"></rect></svg>
+- id: projects
+  svg: <svg><defs><pattern id="nlkdz" patternUnits="userSpaceOnUse" width="20" height="20"><path d="M 5,15l5,-10l5,10" fill="transparent" stroke="rgba(0,0,0,0.1)" stroke-width="1" stroke-linecap="square" shape-rendering="auto"></path></pattern></defs><rect style="fill:url(#nlkdz)" x="0" y="0" height="3000" width="3000"></rect></svg>
+- id: writing
+  svg: <svg><defs><pattern id="nlkdz" patternUnits="userSpaceOnUse" width="20" height="20"><path d="M 5,15l5,-10l5,10" fill="transparent" stroke="rgba(0,0,0,0.1)" stroke-width="1" stroke-linecap="square" shape-rendering="auto"></path></pattern></defs><rect style="fill:url(#nlkdz)" x="0" y="0" height="3000" width="3000"></rect></svg>
+- id: podcasts
+  svg: <svg><defs><pattern id="xdzes" patternUnits="userSpaceOnUse" width="20" height="20"><path d="M 5 5 l 10 0 l 0 10 l -10 0 Z" fill="transparent" stroke="rgba(0,0,0,0.08)" stroke-width="1" stroke-linecap="square" shape-rendering="auto"></path></pattern></defs><rect style="fill:url(#xdzes)" x="0" y="0" height="3000" width="3000"></rect></svg>
+- id: graveyard
+  svg: <svg><defs><pattern id="hnmuo" patternUnits="userSpaceOnUse" width="20" height="20"><path d="M 5,5l10,10M5,15l10,-10" fill="transparent" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-linecap="square" shape-rendering="auto"></path></pattern></defs><rect style="fill:url(#hnmuo)" x="0" y="0" height="3000" width="3000"></rect></svg>

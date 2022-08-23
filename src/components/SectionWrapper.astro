@@ -1,44 +1,51 @@
 ---
-
-const {  index, background} = Astro.props;
+import Texture from "./Texture2.astro";
+const { index, background } = Astro.props;
 ---
+
 <div
   class="section-block section"
   id={`section-${index}`}
   style={{ backgroundColor: background }}
 >
-<slot/>
+  <Texture {...Astro.props} />
+  <div class="section-block-inner">
+    <slot />
+  </div>
 </div>
+
 <style lang="scss">
   @import "../stylesheets/_breakpoints.scss";
 
-.section-block {
-  @include small {
-    padding: 10px 10px 10px 10px;
-  }
-  @include medium {
-    padding: 20px 80px 20px 80px;
-    min-height: 100vh;
-  }
-  @include large {
-    padding: 40px 120px 40px 120px;
-    min-height: 100vh;
-  }
-  display: grid;
-  place-items: center;
-  position: relative;
-  &:last-of-type {
-    .section-icon {
-      &:after {
-        display: none;
+  .section-block {
+    position: relative;
+    &:last-of-type {
+      .section-icon {
+        &:after {
+          display: none;
+        }
       }
     }
-  }
-  &.section-intro {
-    perspective: 1000px;
-    @include small {
-      padding-top: 80px;
+    &.section-intro {
+      perspective: 1000px;
+      @include small {
+        padding-top: 80px;
+      }
+    }
+    .section-block-inner {
+      @include small {
+        padding: 10px 10px 10px 10px;
+      }
+      @include medium {
+        padding: 20px 80px 20px 80px;
+        min-height: 100vh;
+      }
+      @include large {
+        padding: 40px 120px 40px 120px;
+        min-height: 100vh;
+      }
+      display: grid;
+      place-items: center;
     }
   }
-}
 </style>
