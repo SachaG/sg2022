@@ -7,7 +7,7 @@
 - id: projects
   svg: <svg><defs><pattern id="nlkdz" patternUnits="userSpaceOnUse" width="20" height="20"><path d="M 5,15l5,-10l5,10" fill="transparent" stroke="rgba(0,0,0,0.1)" stroke-width="1" stroke-linecap="square" shape-rendering="auto"></path></pattern></defs><rect style="fill:url(#nlkdz)" x="0" y="0" height="3000" width="3000"></rect></svg>
 - id: writing
-  svg: <svg><defs><pattern id="nlkdz" patternUnits="userSpaceOnUse" width="20" height="20"><path d="M 5,15l5,-10l5,10" fill="transparent" stroke="rgba(0,0,0,0.1)" stroke-width="1" stroke-linecap="square" shape-rendering="auto"></path></pattern></defs><rect style="fill:url(#nlkdz)" x="0" y="0" height="3000" width="3000"></rect></svg>
+  svg: <svg><defs><pattern id="osjsb" patternUnits="userSpaceOnUse" width="20" height="20"><circle cx="10" cy="10" r="1" fill="rgba(0,0,0,0.3)" stroke="#343434" stroke-width="0"></circle></pattern></defs><rect style="fill:url(#osjsb)" x="0" y="0" height="3000" width="3000"></rect></svg>
 - id: podcasts
   svg: <svg><defs><pattern id="xdzes" patternUnits="userSpaceOnUse" width="20" height="20"><path d="M 5 5 l 10 0 l 0 10 l -10 0 Z" fill="transparent" stroke="rgba(0,0,0,0.08)" stroke-width="1" stroke-linecap="square" shape-rendering="auto"></path></pattern></defs><rect style="fill:url(#xdzes)" x="0" y="0" height="3000" width="3000"></rect></svg>
 - id: graveyard
