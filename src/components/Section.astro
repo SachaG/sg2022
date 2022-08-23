@@ -1,5 +1,6 @@
 ---
 import Texture from "./Texture.astro";
+import SectionWrapper from "./SectionWrapper.astro";
 import SectionIcon from "./SectionIcon.astro";
 import Markdown from "@astrojs/markdown-component";
 import Item from "./Item.astro";
@@ -8,11 +9,7 @@ const { name, title, description, items, index, background, text, cta } =
   Astro.props;
 ---
 
-<div
-  class="section-block section"
-  id={`section-${index}`}
-  style={{ backgroundColor: background }}
->
+<SectionWrapper {...Astro.props}>
   <!-- <Texture
     className="svg-background"
     width={100}
@@ -49,40 +46,9 @@ const { name, title, description, items, index, background, text, cta } =
       {items && items.map((item) => <Item {...item} />)}
     </div>
   </div>
-</div>
-
+</SectionWrapper>
 <style lang="scss">
   @import "../stylesheets/_breakpoints.scss";
-
-  .section-block {
-    @include small {
-      padding: 10px 10px 10px 10px;
-    }
-    @include medium {
-      padding: 20px 80px 20px 80px;
-      min-height: 100vh;
-    }
-    @include large {
-      padding: 40px 120px 40px 120px;
-      min-height: 100vh;
-    }
-    display: grid;
-    place-items: center;
-    position: relative;
-    &:last-of-type {
-      .section-icon {
-        &:after {
-          display: none;
-        }
-      }
-    }
-    &.section-intro {
-      perspective: 1000px;
-      @include small {
-        padding-top: 80px;
-      }
-    }
-  }
 
   .section-title {
     font-weight: var(--bold);
