@@ -1,10 +1,14 @@
+name: 
+  title: 
+    en: Sacha Greif
+    ja: グレフ　サーシャ
 intro: 
   contents: 
     en: >
       As a designer-who-codes (or is it a developer-who-designs?), I specialize in making developer-focused products more
       appealing and more accessible.
     ja: >
-      どんぐりころころ　ドンブリコ
+      コーディングを担当するデザイナー (または設計を担当する開発者ですか?) として、私は開発者向けの製品をより魅力的でアクセスしやすいものにすることを専門としています。
 skills: 
   - id: branding
     title: 
@@ -12,7 +16,7 @@ skills:
       ja: ブランディング
     contents: 
       en: >
-        I can help you define your brand to make sure it sends the right message. This can include coming up with a new logo, finding the right color palette, or selecting the perfect typefaces; either myself directly or while working with a brand designer.
+        I can help you make sure your brand sends the right message. This can include designing a  logo, finding the right color palette, selecting the perfect typeface, finding icons and illustrations, and much more.
       ja: >
         ブランドが正しいメッセージを確実に伝えるように、ブランドを定義するお手伝いをします。 これには、新しいロゴの考案、適切なカラー パレットの検索、または完璧な書体の選択が含まれます。 私自身、またはブランドデザイナーと一緒に仕事をしている間に。
   - id: design
@@ -21,7 +25,7 @@ skills:
       ja: デザイン
     contents: 
       en: >
-        I can review your product's accessibility and usability to see if there are any roadblocks that might prevent potential users from understanding it properly. This is especially crucial for developer-focused products, which by their nature tend to be complex and highly technical.
+        I can review your product's accessibility and usability to find any roadblocks that might prevent users from understanding it properly. This is especially crucial for developer-focused products, which are often highly technical.
       ja: >
         製品のアクセシビリティとユーザビリティを見直して、潜在的なユーザーが製品を適切に理解するのを妨げる可能性のある障害がないかどうかを確認できます。 これは、その性質上、複雑で高度に技術的になりがちな開発者中心の製品にとって特に重要です。
   - id: marketing
@@ -30,11 +34,12 @@ skills:
       ja: マーケティング
     contents: 
       en: >
-        I can help you build a broader audience by tweaking your homepage's copy, exploring new inbound channels, and writing engaging content. I have a lot of experience writing long-form blog posts and e-books, and from what I've seen they're one of the best ways to generate interest for a product.
+        Good content marketing is one of the best ways to reach a broader audience, and I can help you tweak your homepage copy, write engaging blog posts, or even produce e-books or guides that will become new inbound channels for your product.  
       ja: >
         ホームページのコピーを微調整し、新しいインバウンド チャネルを探索し、魅力的なコンテンツを作成することで、より多くの視聴者を獲得できるようお手伝いします。 私は長いブログ記事や電子書籍を書いた経験が豊富で、製品に対する関心を高める最良の方法の 1 つです。
 projects: 
   - id: surveys
+    image: surveys.png
     title: 
       en: Surveys
       ja: アンケート
@@ -45,12 +50,13 @@ projects:
         State of JavaScript および State of CSS 開発者調査を実施する組織である Devographics を作成しました。 毎年 20,000 人を超える開発者が利用しており、結果として得られるデータは、Google や他のブラウザー ベンダーがロードマップを通知するために使用されています。
 
   - id: logos
+    image: logos.png
     title: 
       en: Logos
       ja: ロゴ
     contents: 
       en: >
-        I [designed the logo](https://www.gatsbyjs.com/guidelines/logo) for [Gatsby](https://www.gatsbyjs.com/), one of the most popular React static site generators, and I also [designed the logo](https://github.com/graphql/graphiql/issues/763#issue-402974426) for [GraphiQL](https://github.com/graphql/graphiql), the leading GraphQL IDE.
+        I've designed logos for a few popular open-source projects such as [Gatsby](https://www.gatsbyjs.com/guidelines/log) and [GraphiQL](https://github.com/graphql/graphiql/issues/763#issue-402974426), and my own framework [Vulcan.js](http://vulcanjs.org/). I also contributed to the design of the [Storybook](https://github.com/storybookjs/storybook/issues/1100) logo.
       ja: >
         どんぐりころころ　ドンブリコ
 
@@ -89,7 +95,7 @@ projects:
       ja: ドンブリコ
     contents: 
       en: >
-        I have written multiple long-form articles which did very well on Twitter, Hacker News, etc. The latest example is [my retrospective of the last 10 years of the Meteor JavaScript framework](https://meteor10.sachagreif.com/). I also wrote a popular [guide about community building](https://www.communitybuildingguide.com/).
+        I have written multiple long-form articles which did very well on Twitter, Hacker News, etc. The latest example is [my retrospective of the last 10 years of the Meteor JavaScript framework](https://meteor10.sachagreif.com/). I also wrote a popular [guide about community building](https://www.communitybuildingguide.com/). I've also contributed to popular online publications such as [CSS-Tricks](https://css-tricks.com/author/sachagreif/) and [Smashing Magazine](https://www.smashingmagazine.com/author/sacha-g/).
       ja: >
         どんぐりころころ　ドンブリコ
 

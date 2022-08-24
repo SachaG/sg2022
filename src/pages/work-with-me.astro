@@ -3,20 +3,33 @@ import Layout from "../layouts/Layout.astro";
 import data from "../data/work-with-me.yml";
 import LanguageSelector from "../components/work-with-me/LanguageSelector.astro";
 import Block from "../components/work-with-me/Block.astro";
+import Name from "../components/work-with-me/Name.astro";
 
-const { intro, skills, projects } = data;
+const { name, intro, skills, projects } = data;
 ---
 
 <Layout title="Sacha Greif | Work With Me">
   <div class="wrapper">
+    <LanguageSelector />
+
     <main>
-      <LanguageSelector />
+      <div class="top">
+        <section class="name">
+          <Name/>
+          <!-- <Block id="name" contents={name.title} /> -->
+        </section>
 
-      <!-- <Block id="intro" contents={intro.contents} /> -->
+        <section class="intro">
+          <Block id="intro" contents={intro.contents} />
+        </section>
+      </div>
+      <section class="skills">
+        {skills.map((skill) => <Block {...skill} variant="skill" />)}
+      </section>
 
-      {skills.map((skill) => <Block {...skill} />)}
-
-      {projects.map((project) => <Block {...project} />)}
+      <section class="projects">
+        {projects.map((project) => <Block {...project} variant="project" />)}
+      </section>
     </main>
   </div>
 </Layout>
@@ -42,5 +55,25 @@ const { intro, skills, projects } = data;
   }
   main {
     background: var(--white);
+    padding: var(--doublespacing);
+  }
+  .top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: var(--doublespacing);
+    margin-bottom: var(--spacing);
+  }
+  section {
+    // padding: 0 var(--doublespacing);
+  }
+  .intro {
+    font-size: var(--largefont);
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: var(--doublespacing);
   }
 </style>
