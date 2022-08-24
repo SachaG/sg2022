@@ -1,0 +1,48 @@
+---
+import Markdown from "@astrojs/markdown-component";
+
+const { contents } = Astro.props;
+---
+
+<h2 class="heading">
+  <span class="placeholder">XYZ</span>
+  <span class="heading-inner">
+  {
+    Object.keys(contents).map((lang) => (
+      <span lang={lang}>
+        {contents[lang]}
+      </span>
+    ))
+  }
+  </span>
+</h2>
+
+
+<style lang="scss">
+  .heading {
+    overflow: hidden;
+    position: relative;
+  }
+  .placeholder{
+    visibility: hidden;
+  }
+  .heading-inner {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 300ms ease-out;
+  }
+  // :global(.block [lang="en-US"]) {
+  //   display: block;
+  // }
+  // :global(.block [lang="ja-JP"]) {
+  //   display: none;
+  // }
+  // :global(input[type="radio"][id="ja-JP"]:checked ~ .block [lang="en-US"]) {
+  //   display: none;
+  // }
+  :global(input[type="radio"][id="ja-JP"]:checked ~ .block .heading-inner) {
+    transform: translateY(-50%);
+  }
+</style>

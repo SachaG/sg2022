@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import data from "../data/work-with-me.yml";
+import LanguageSelector from "../components/work-with-me/LanguageSelector.astro";
+import Block from "../components/work-with-me/Block.astro";
+
+const { intro, skills, projects } = data;
+---
+
+<Layout title="Sacha Greif | Work With Me">
+  <div class="wrapper">
+    <main>
+      <LanguageSelector />
+
+      <!-- <Block id="intro" contents={intro.contents} /> -->
+
+      {skills.map((skill) => <Block {...skill} />)}
+
+      {projects.map((project) => <Block {...project} />)}
+    </main>
+  </div>
+</Layout>
+
+<style lang="scss">
+  @import "../stylesheets/_breakpoints.scss";
+  .wrapper {
+    background: var(--orangered);
+
+    @include small {
+      padding: 10px 10px 10px 10px;
+    }
+    @include medium {
+      padding: 20px 80px 20px 80px;
+      min-height: 100vh;
+    }
+    @include large {
+      padding: 40px 120px 40px 120px;
+      min-height: 100vh;
+    }
+    display: grid;
+    place-items: center;
+  }
+  main {
+    background: var(--white);
+  }
+</style>

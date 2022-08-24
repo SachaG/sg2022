@@ -1,0 +1,61 @@
+---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+
+const { id, title, contents } = Astro.props;
+---
+
+<section class="block">
+  {
+    id !== "intro" && (
+      <div class="block-image">
+        <svg
+          width="42px"
+          height="46px"
+          viewBox="0 0 42 46"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <g
+            id="Page-1"
+            stroke="none"
+            stroke-width="1"
+            fill="none"
+            fill-rule="evenodd"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline
+              id="Stroke-1992"
+              stroke-width="2"
+              points="28 45 28 40 35 40 35 30 41 30 35 17 35 11 19 1 1 11 1 30 9 37 9 45"
+            />
+          </g>
+        </svg>
+      </div>
+    )
+  }
+
+  <div class="block-contents">
+    {title && <Heading contents={title} />}
+    <Text contents={contents} />
+  </div>
+</section>
+
+<style lang="scss">
+  svg {
+    polyline {
+      stroke: red;
+    }
+  }
+  section {
+    margin-bottom: var(--spacing);
+    display: grid;
+    grid-template-columns: 200px var(--textblockwidth);
+    column-gap: var(--doublespacing);
+  }
+  .block-contents {
+    padding: var(--doublespacing);
+  }
+</style>

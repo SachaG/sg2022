@@ -22,6 +22,8 @@
   --grey: #BBC0C6;
 
   --mobile-bp: 600px;
+
+  --textblockwidth: 500px;
 }
 @import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700');
 
@@ -56,3 +58,10 @@ a{
     text-decoration: underline;
   }
 }
+
+// [lang="en"] {
+//   background: #eeffee;
+// }
+// [lang="ja"] {
+//   background: #ffeeee;
+// }
