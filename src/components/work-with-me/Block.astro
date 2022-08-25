@@ -2,14 +2,14 @@
 import Heading from "./Heading.astro";
 import Text from "./Text.astro";
 
-const { id, image, title, contents, variant = '' } = Astro.props;
+const { id, image, title, contents, variant = "" } = Astro.props;
 ---
 
 <section class={`block block-${variant}`}>
   {
     image && (
       <div class="block-image">
-        <img src={`/images/work-with-me/${image}`}/>
+        <img src={`/images/work-with-me/${image}`} />
       </div>
     )
   }
@@ -27,11 +27,27 @@ const { id, image, title, contents, variant = '' } = Astro.props;
     }
   }
   .block {
-    margin-bottom: var(--spacing);
+    // margin-bottom: var(--spacing);
+    &-intro {
+      font-size: var(--largefont);
+      grid-column-start: 2;
+      grid-column-end: 4;
+      :global(strong) {
+        color: var(--black);
+        // background: linear-gradient(
+        //   to right,
+        //   var(--orangered),
+        //   var(--black),
+        // );
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+      }
+    }
     &-project {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: var(--doublespacing);
+      margin-bottom: var(--spacing);
     }
   }
   .block-image {
@@ -44,5 +60,8 @@ const { id, image, title, contents, variant = '' } = Astro.props;
     grid-column-start: 2;
     grid-column-end: 4;
     // padding: var(--doublespacing);
+    :global(p) {
+      margin-bottom: var(--halfspacing);
+    }
   }
 </style>

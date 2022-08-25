@@ -1,0 +1,53 @@
+---
+---
+
+<a class="contact" href="mailto:getintouch@sachagreif.com">
+  <span class="placeholder text">XYZ</span>
+  <span class="contact-inner">
+    <span class="text" lang="en">Get in Touch</span>
+    <span class="text" lang="ja">連絡</span>
+  </span>
+</a>
+
+<style lang="scss">
+  .contact {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--largefont);
+    // background: var(--black);
+    // color: var(--white);
+    // text-align: center;
+    overflow: hidden;
+    position: relative;
+    background: var(--orangered);
+    text-align: center;
+    color: var(--white);
+    width: 300px;
+    margin: 0 auto;
+    &:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+  }
+  .placeholder {
+    visibility: hidden;
+  }
+  .contact-inner {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 300ms ease-out;
+    width: 100%;
+  }
+  .text {
+    white-space: nowrap;
+    padding: 10px 10px;
+  }
+  :global(input[type="radio"][id="ja-JP"]:checked ~ main .contact-inner) {
+    transform: translateY(-50%);
+  }
+</style>

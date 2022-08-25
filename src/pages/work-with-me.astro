@@ -4,8 +4,10 @@ import data from "../data/work-with-me.yml";
 import LanguageSelector from "../components/work-with-me/LanguageSelector.astro";
 import Block from "../components/work-with-me/Block.astro";
 import Name from "../components/work-with-me/Name.astro";
+import Contact from "../components/work-with-me/Contact.astro";
+import Heading from "../components/work-with-me/Heading.astro";
 
-const { name, intro, skills, projects } = data;
+const { name, intro, skills, projects, other_projects } = data;
 ---
 
 <Layout title="Sacha Greif | Work With Me">
@@ -13,22 +15,42 @@ const { name, intro, skills, projects } = data;
     <LanguageSelector />
 
     <main>
-      <div class="top">
-        <section class="name">
-          <Name/>
-          <!-- <Block id="name" contents={name.title} /> -->
-        </section>
+      <section class="top">
+        <div class="section-inner">
+          <Name />
+          <Block id="intro" contents={intro.contents} variant="intro" />
+        </div>
+      </section>
 
-        <section class="intro">
-          <Block id="intro" contents={intro.contents} />
-        </section>
-      </div>
+      <section class="contact">
+        <div class="section-inner"><Contact /></div>
+      </section>
+
       <section class="skills">
-        {skills.map((skill) => <Block {...skill} variant="skill" />)}
+        <!-- <Heading contents={skills.title} variant="level1" /> -->
+        <div class="section-inner">
+          {skills.items.map((skill) => <Block {...skill} variant="skill" />)}
+        </div>
       </section>
 
       <section class="projects">
-        {projects.map((project) => <Block {...project} variant="project" />)}
+        <Heading contents={projects.title} variant="level1" />
+        {
+          projects.items.map((project) => (
+            <Block {...project} variant="project" />
+          ))
+        }
+      </section>
+
+      <section class="other-projects">
+        <Heading contents={other_projects.title} variant="level1" />
+        <div class="section-inner">
+          {
+            other_projects.items.map((project) => (
+              <Block {...project} variant="other_project" />
+            ))
+          }
+        </div>
       </section>
     </main>
   </div>
@@ -58,20 +80,13 @@ const { name, intro, skills, projects } = data;
     padding: var(--doublespacing);
   }
   .top {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: var(--doublespacing);
     margin-bottom: var(--spacing);
   }
   section {
     // padding: 0 var(--doublespacing);
+    margin-bottom: var(--doublespacing);
   }
-  .intro {
-    font-size: var(--largefont);
-    grid-column-start: 2;
-    grid-column-end: 4;
-  }
-  .skills {
+  .section-inner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: var(--doublespacing);

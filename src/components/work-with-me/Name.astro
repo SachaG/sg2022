@@ -4,54 +4,49 @@ import Markdown from "@astrojs/markdown-component";
 const { contents } = Astro.props;
 ---
 
-<h1 class="heading">
-  <span class="heading-wrapper">
+<h1 class="name">
+  <span class="name-wrapper">
     <span class="placeholder">XYZ</span>
-    <span class="heading-inner">
-      <span lang="en"> Sacha</span>
-      <span lang="ja"> グレフ</span>
+    <span class="name-inner">
+      <span lang="en">Sacha</span>
+      <span lang="ja">グレフ</span>
     </span>
   </span>
-  <span class="heading-wrapper">
+  <span class="name-wrapper">
     <span class="placeholder">XYZ</span>
-    <span class="heading-inner">
-      <span lang="en"> Greif</span>
-      <span lang="ja"> サーシャ</span>
+    <span class="name-inner">
+      <span lang="en">Greif</span>
+      <span lang="ja">サーシャ</span>
     </span>
   </span>
 </h1>
 
 <style lang="scss">
-  .heading {
+  .name {
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
     font-size: var(--extralargefont);
+    // background: var(--black);
+    // color: var(--white);
+    // text-align: center;
   }
-  .heading-wrapper {
+  .name-wrapper {
     overflow: hidden;
     position: relative;
   }
   .placeholder {
     visibility: hidden;
   }
-  .heading-inner {
+  .name-inner {
     position: absolute;
     top: 0;
     display: flex;
     flex-direction: column;
     transition: all 300ms ease-out;
+    width: 100%;
   }
-  // :global(.block [lang="en-US"]) {
-  //   display: block;
-  // }
-  // :global(.block [lang="ja-JP"]) {
-  //   display: none;
-  // }
-  // :global(input[type="radio"][id="ja-JP"]:checked ~ .block [lang="en-US"]) {
-  //   display: none;
-  // }
-  :global(input[type="radio"][id="ja-JP"]:checked ~ main .heading-inner) {
+  :global(input[type="radio"][id="ja-JP"]:checked ~ main .name-inner) {
     transform: translateY(-50%);
   }
 </style>
