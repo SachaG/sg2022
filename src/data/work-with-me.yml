@@ -7,7 +7,7 @@ intro:
     en: >
       As a designer-who-codes (or is it a developer-who-designs?), I specialize in making complex products **more appealing** and **more accessible**.
     ja: >
-      コーディングを担当するデザイナー (または設計を担当する開発者ですか?) として、私は開発者向けの製品をより魅力的でアクセスしやすいものにすることを専門としています。
+      私はプログラミングのできるデザイナー（もしくはデザインができる開発者？）として、複雑な製品を**より魅力的**に、**より近づきやすく**することを専門としております。
 skills: 
   title:
     en: What I Can Do
@@ -24,7 +24,10 @@ skills:
 
           This can include designing a  logo, finding the right color palette, selecting the perfect typeface, finding icons and illustrations, and much more.
         ja: >
-          ブランドが正しいメッセージを確実に伝えるように、ブランドを定義するお手伝いをします。 これには、新しいロゴの考案、適切なカラー パレットの検索、または完璧な書体の選択が含まれます。 私自身、またはブランドデザイナーと一緒に仕事をしている間に。
+          あなたのブランドが適切なメッセージを発するお手伝いができます。
+
+
+          例えばロゴのデザインの他、適切なカラーパレットを選び出したり、ぴったりの書体のセレクト、アイコンやイラストの選定もお手伝いいたします。
     - id: design
       title: 
         en: Design
@@ -36,7 +39,10 @@ skills:
           
           This is especially crucial for developer-focused products, which are often highly technical.
         ja: >
-          製品のアクセシビリティとユーザビリティを見直して、潜在的なユーザーが製品を適切に理解するのを妨げる可能性のある障害がないかどうかを確認できます。 これは、その性質上、複雑で高度に技術的になりがちな開発者中心の製品にとって特に重要です。
+          ユーザーが製品をきちんと理解する妨げになっている要素がないかチェックするため、製品の利用しやすさやユーザビリティをレビューいたします。
+
+
+          これは開発者中心の専門性の高い製品では特に重要となります。
     - id: marketing
       title: 
         en: Marketing
@@ -48,33 +54,36 @@ skills:
           
           I can help you tweak your homepage copy, write engaging blog posts, or even produce e-books or guides that will become new inbound channels for your product.  
         ja: >
-          ホームページのコピーを微調整し、新しいインバウンド チャネルを探索し、魅力的なコンテンツを作成することで、より多くの視聴者を獲得できるようお手伝いします。 私は長いブログ記事や電子書籍を書いた経験が豊富で、製品に対する関心を高める最良の方法の 1 つです。
+          すぐれたコンテンツ・マーケティングはオーディエンス拡大のためのとても重要な手段です。
+
+
+          貴社のホームページのコピーをチューンアップしたり、読者の関心を呼ぶブログを書いたり、新たな読者の入り口となるような電子書籍やガイドを制作するお手伝いをいたします。
 projects: 
   title:
     en: My Work
-    ja: 仕事
+    ja: これまでの仕事
   items: 
     - id: surveys
       image: surveys.png
       title: 
         en: Developer Surveys
-        ja: アンケート
+        ja: 開発者調査
       contents: 
         en: >
           I run the [State of JavaScript](https://stateofjs.com/), [State of CSS](https://stateofcss.com/), and [State of GraphQL](https://stateofgraphql.com) developer surveys. They reach over 20,000 developers every year, and the resulting data has been used by [Google](https://web.dev/interop-2022/#:~:text=State%20of%20CSS%202021) and other browser vendors to inform their roadmaps.
         ja: >
-          State of JavaScript および State of CSS 開発者調査を実施する組織である Devographics を作成しました。 毎年 20,000 人を超える開発者が利用しており、結果として得られるデータは、Google や他のブラウザー ベンダーがロードマップを通知するために使用されています。
+          私は開発者を対象とした調査[State of JavaScript](https://stateofjs.com/)、[State of CSS](https://stateofcss.com/)、[State of GraphQL](https://stateofgraphql.com)の運営に携わっています。これらの調査は毎年、2万人を超える開発者を対象に行われ、得られたデータは[グーグル](https://web.dev/interop-2022/#:~:text=State%20of%20CSS%202021)を初めとするブラウザのベンダーにより、今後のロードマップの検討材料として利用されてきました。
 
     - id: logos
       image: logos.png
       title: 
         en: Open-Source Branding
-        ja: ロゴ
+        ja: オープンソースのブランディング
       contents: 
         en: >
           Although I'm not primarily a logo designer, I've designed brands for a few popular open-source projects such as [Gatsby](https://www.gatsbyjs.com/guidelines/log) and [GraphiQL](https://github.com/graphql/graphiql/issues/763#issue-402974426), and my own framework [Vulcan.js](http://vulcanjs.org/). I also contributed to the design of the [Storybook](https://github.com/storybookjs/storybook/issues/1100) logo.
         ja: >
-          どんぐりころころ　ドンブリコ
+          ロゴデザインは私の本業ではありませんが、[Gatsby](https://www.gatsbyjs.com/guidelines/log)や[GraphiQL](https://github.com/graphql/graphiql/issues/763#issue-402974426)といった人気のオープンソース・プロジェクトや、私自身の開発したフレームワークである[Vulcan.js](http://vulcanjs.org/)などのブランドデザインに携わってまいりました。また、[Storybook](https://github.com/storybookjs/storybook/issues/1100)のロゴのデザインにも携わりました。
 
     - id: discovermeteor
       image: discovermeteor.png
@@ -85,7 +94,7 @@ projects:
         en: >
           I co-authored the [Discover Meteor](http://www.discovermeteor.com/) e-book, which for a long time was the main introductory book for the [Meteor](https://www.meteor.com/) JavaScript framework. The book sold over 12,000　copies, resulting in over $575,000 in revenue.
         ja: >
-          どんぐりころころ　ドンブリコ
+          私は電子書籍[Discover Meteor](http://www.discovermeteor.com/)の共著者でもあります。この本は長年にわたり、JavaScriptフレームワーク[Meteor](https://www.meteor.com/)のよく知られた入門書とされてまいりました。販売部数は1万2000部を超え、売上は57万5000ドルを超えております。
 
     - id: sidebar
       image: sidebar.png
@@ -96,7 +105,7 @@ projects:
         en: >
           I run the daily [Sidebar](https://sidebar.io) design newsletter, which has over 60,000 subscribers and is consistently cited in lists of the best design resources.
         ja: >
-          どんぐりころころ　ドンブリコ
+          デザインがテーマの日刊ニュースレター[Sidebar](https://sidebar.io)の発行も行っております。Sidebarの購読者は6万人を超え、すぐれたデザインの情報源として名前が挙がることも珍しくありません。
 
     - id: vulcanjs
       image: vulcanjs.png
@@ -107,12 +116,12 @@ projects:
         en: >
           I developed my own open-source app framework, [Vulcan.js](http://vulcanjs.org/). I use it to run [Sidebar](https://sidebar.io/), and also previously used it to build ZensHome, a real-estate booking app, for Tokyo-based [Zens](https://zens.tokyo/)
         ja: >
-          どんぐりころころ　ドンブリコ
+          私はオープンソースのwebアプリケーション向けフレームワーク、[Vulcan.js](http://vulcanjs.org/)の開発者でもあります。私自身はこれを[Sidebar](https://sidebar.io/)の運営に利用しているほか、Vulcan.jsを使って[Zens](https://zens.tokyo/)社（本社：東京）向けのZensHomeという不動産予約アプリも開発いたしました。
 
 other_projects: 
   title:
     en: Other Activities
-    ja: 別の活動
+    ja: 他の活動
   items: 
     - id: events
       title: 
@@ -122,12 +131,12 @@ other_projects:
         en: >
           I co-founded our local [Hacker News](https://news.ycombinator.com/) meetup group, [HN Kansai](http://hnkansai.org/). We've had over 60 in-person events, and our [Slack community](https://hnkansai-slack.now.sh/) has over 500 members.
         ja: >
-          どんぐりころころ　ドンブリコ
+          私は[Hacker News](https://news.ycombinator.com/)のオフ会グループである[HN Kansai](http://hnkansai.org/)の発起人の1人です。これまでに対面型のイベントを60回以上開催してまいりました。[Slackのコミュニティ]((https://hnkansai-slack.now.sh/))には500人を超える方々のご参加を頂いています
 
     - id: writing
       title: 
         en: Writing
-        ja: ドンブリコ
+        ja: 著作
       contents: 
         en: >
           My latest long-form article is [my retrospective of the last 10 years of Meteor](https://meteor10.sachagreif.com/). 
@@ -135,14 +144,16 @@ other_projects:
 
           I also wrote a popular [guide about community building](https://www.communitybuildingguide.com/), and I've also contributed to popular online publications such as [CSS-Tricks](https://css-tricks.com/author/sachagreif/) and [Smashing Magazine](https://www.smashingmagazine.com/author/sacha-g/).
         ja: >
-          どんぐりころころ　ドンブリコ
+          長文記事では、[Meteorのこの10年間を振り返るという内容のもの]((https://meteor10.sachagreif.com/))が最新です。
+
+          また、私の書いたコミュニティ立ち上げに関するガイドは好評をいただいております。[CSS-Tricks](https://css-tricks.com/author/sachagreif/)や[Smashing Magazine](https://www.smashingmagazine.com/author/sacha-g/)といった人気のオンラインメディアにも寄稿しております。
 
     - id: speaking
       title: 
         en: Speaking
-        ja: ドンブリコ
+        ja: 講演
       contents: 
         en: >
           I've spoken at many events all over the world, including the [Rakuten Technology Conference](https://tech.rakuten.co.jp/speakers/sacha-greif/) and [JSConf](https://jsconf.jp/2021/talk/state-of-css-2021-survey-results/) in Tokyo, [Nordic.js](https://www.youtube.com/watch?v=FZw1j_tTSag&t=1813s) in Stockholm, and [Dot.js](https://www.youtube.com/watch?v=ShHsshcTOJo) in Paris.
         ja: >
-          どんぐりころころ　ドンブリコ
+          東京で開催された[Rakuten Technology Conference](https://tech.rakuten.co.jp/speakers/sacha-greif/)や[JSConf]((https://jsconf.jp/2021/talk/state-of-css-2021-survey-results/))、ストックホルムで行われた[Nordic.js]((https://www.youtube.com/watch?v=FZw1j_tTSag&t=1813s))、パリで行われた[Dot.js]((https://www.youtube.com/watch?v=ShHsshcTOJo))などの世界各地のイベントで講演も行ってまいりました。
