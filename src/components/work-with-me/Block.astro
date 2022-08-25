@@ -21,15 +21,16 @@ const { id, image, title, contents, variant = "" } = Astro.props;
 </section>
 
 <style lang="scss">
-  svg {
-    polyline {
-      stroke: red;
-    }
-  }
+  @import "../../stylesheets/_breakpoints.scss";
   .block {
     // margin-bottom: var(--spacing);
     &-intro {
-      font-size: var(--largefont);
+      @include small {
+        font-size: var(--mediumfont);
+      }
+      @include medium-large {
+        font-size: var(--largefont);
+      }
       grid-column-start: 2;
       grid-column-end: 4;
       :global(strong) {
@@ -43,10 +44,17 @@ const { id, image, title, contents, variant = "" } = Astro.props;
         // -webkit-text-fill-color: transparent;
       }
     }
+    &-skill, &-other-project {
+      @include small {
+        margin-bottom: var(--spacing);
+      }
+    }
     &-project {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      column-gap: var(--doublespacing);
+      @include medium-large {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: var(--doublespacing);
+      }
       margin-bottom: var(--spacing);
     }
   }
@@ -55,6 +63,9 @@ const { id, image, title, contents, variant = "" } = Astro.props;
       display: block;
       width: 100%;
     }
+    @include small {
+      margin-bottom: var(--halfspacing);
+    }
   }
   .block-contents {
     grid-column-start: 2;
@@ -62,6 +73,9 @@ const { id, image, title, contents, variant = "" } = Astro.props;
     // padding: var(--doublespacing);
     :global(p) {
       margin-bottom: var(--halfspacing);
+    }
+    :global(p:last-child) {
+      margin-bottom: 0;
     }
   }
 </style>

@@ -1,7 +1,7 @@
 ---
 ---
 
-<a class="contact" href="mailto:getintouch@sachagreif.com">
+<a class="contact" href="mailto:contact@sachagreif.com">
   <span class="placeholder text">XYZ</span>
   <span class="contact-inner">
     <span class="text" lang="en">Get in Touch</span>
@@ -10,6 +10,8 @@
 </a>
 
 <style lang="scss">
+  @import "../../stylesheets/_breakpoints.scss";
+
   .contact {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -25,7 +27,8 @@
     background: var(--orangered);
     text-align: center;
     color: var(--white);
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     margin: 0 auto;
     &:hover {
       background: var(--black);

@@ -8,6 +8,7 @@
   <label for="ja-JP" lang="ja-JP">日本語</label>
 </div>
 <style lang="scss">
+  @import "../../stylesheets/_breakpoints.scss";
   .lang-input {
     display: none;
   }
@@ -16,7 +17,12 @@
     gap: var(--halfspacing);
     margin-bottom: var(--halfspacing);
     width: 100%;
-    justify-content: flex-end;
+    @include small {
+      justify-content: center;
+    }
+    @include medium-large {
+      justify-content: flex-end;
+    }
   }
   label {
     // transition: all 300ms ease-in;

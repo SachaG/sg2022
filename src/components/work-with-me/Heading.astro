@@ -7,23 +7,34 @@ const { contents, variant } = Astro.props;
 <h2 class={`heading heading-${variant}`}>
   <span class="placeholder">XYZ</span>
   <span class="heading-inner">
-  {
-    Object.keys(contents).map((lang) => (
-      <span lang={lang}>
-        {contents[lang]}
-      </span>
-    ))
-  }
+    {
+      Object.keys(contents).map((lang) => (
+        <span lang={lang}>{contents[lang]}</span>
+      ))
+    }
   </span>
 </h2>
 
 <style lang="scss">
+  @import "../../stylesheets/_breakpoints.scss";
+
   .heading {
     overflow: hidden;
     position: relative;
     margin-bottom: var(--halfspacing);
+    @include small {
+      font-size: var(--mediumfont);
+    }
+    @include medium-large {
+      font-size: var(--largefont);
+    }
     &-level1 {
-      font-size: var(--largerfont);
+      @include small {
+        font-size: var(--largefont);
+      }
+      @include medium-large {
+        font-size: var(--largerfont);
+      }
       text-align: center;
       margin-bottom: var(--spacing);
       .heading-inner {
@@ -31,7 +42,7 @@ const { contents, variant } = Astro.props;
       }
     }
   }
-  .placeholder{
+  .placeholder {
     visibility: hidden;
   }
   .heading-inner {

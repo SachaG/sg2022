@@ -47,7 +47,7 @@ const { name, intro, skills, projects, other_projects } = data;
         <div class="section-inner">
           {
             other_projects.items.map((project) => (
-              <Block {...project} variant="other_project" />
+              <Block {...project} variant="other-project" />
             ))
           }
         </div>
@@ -77,18 +77,28 @@ const { name, intro, skills, projects, other_projects } = data;
   }
   main {
     background: var(--white);
-    padding: var(--doublespacing);
+    @include small {
+      padding: var(--halfspacing);
+    }
+    @include medium-large {
+      padding: var(--doublespacing);
+    }
   }
   .top {
-    margin-bottom: var(--spacing);
   }
   section {
-    // padding: 0 var(--doublespacing);
-    margin-bottom: var(--doublespacing);
+    @include small {
+      margin-bottom: var(--spacing);
+    }
+    @include medium-large {
+      margin-bottom: var(--doublespacing);
+    }
   }
   .section-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: var(--doublespacing);
+    @include medium-large {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: var(--doublespacing);
+    }
   }
 </style>

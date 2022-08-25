@@ -22,6 +22,8 @@ const { contents } = Astro.props;
 </h1>
 
 <style lang="scss">
+  @import "../../stylesheets/_breakpoints.scss";
+
   .name {
     margin-bottom: 0;
     display: flex;
@@ -29,7 +31,10 @@ const { contents } = Astro.props;
     font-size: var(--extralargefont);
     // background: var(--black);
     // color: var(--white);
-    // text-align: center;
+    @include small {
+      text-align: center;
+      margin-bottom: var(--halfspacing);
+    }
   }
   .name-wrapper {
     overflow: hidden;
