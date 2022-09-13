@@ -3,13 +3,15 @@ import Heading from "./Heading.astro";
 import Text from "./Text.astro";
 
 const { id, image, title, contents, variant = "" } = Astro.props;
+
+const alt = title && (title.en !== title.ja ? `${title.en} | ${title.ja}` : title.en)
 ---
 
 <section class={`block block-${variant}`}>
   {
     image && (
       <div class="block-image">
-        <img src={`/images/work-with-me/${image}`} />
+        <img src={`/images/work-with-me/${image}`} alt={alt} />
       </div>
     )
   }
@@ -45,7 +47,7 @@ const { id, image, title, contents, variant = "" } = Astro.props;
       }
     }
     &-skill, &-other-project {
-      @include small {
+      @include small-medium {
         margin-bottom: var(--spacing);
       }
     }

@@ -65,7 +65,7 @@ const { name, intro, skills, projects, other_projects } = data;
       padding: 10px 10px 10px 10px;
     }
     @include medium {
-      padding: 20px 80px 20px 80px;
+      padding: 20px 40px 20px 40px;
       min-height: 100vh;
     }
     @include large {
@@ -77,25 +77,25 @@ const { name, intro, skills, projects, other_projects } = data;
   }
   main {
     background: var(--white);
-    @include small {
+    @include small-medium {
       padding: var(--halfspacing);
     }
-    @include medium-large {
+    @include large {
       padding: var(--doublespacing);
     }
   }
   .top {
   }
   section {
-    @include small {
+    @include small-medium {
       margin-bottom: var(--spacing);
     }
-    @include medium-large {
+    @include large {
       margin-bottom: var(--doublespacing);
     }
   }
   .section-inner {
-    @include medium-large {
+    @include large {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: var(--doublespacing);
